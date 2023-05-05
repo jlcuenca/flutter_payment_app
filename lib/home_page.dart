@@ -18,12 +18,12 @@ class _HomePageState extends State<HomePage> {
     paymentConfiguration: PaymentConfiguration.fromJsonString(defaultApplePay),
     paymentItems: const [
       PaymentItem(
-        label: 'Item A',
+        label: 'Sandi Básico',
         amount: '0.01',
         status: PaymentItemStatus.final_price,
       ),
       PaymentItem(
-        label: 'Item B',
+        label: 'Sandi Premium',
         amount: '0.01',
         status: PaymentItemStatus.final_price,
       ),
@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
     paymentConfiguration: PaymentConfiguration.fromJsonString(defaultGooglePay),
     paymentItems: const [
       PaymentItem(
-        label: 'Total',
+        label: 'Sandi Premium',
         amount: '0.01',
         status: PaymentItemStatus.final_price,
       )

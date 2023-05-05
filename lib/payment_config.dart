@@ -1,12 +1,12 @@
 const String defaultApplePay = '''{
   "provider": "apple_pay",
   "data": {
-    "merchantIdentifier": "example",
-    "displayName": "Example Name",
-    "merchantCapabilities": ["3DS", "debit", "credit"],
+    "merchantIdentifier": "merchant.mx.sanidaddigital.sandicheck",
+    "displayName": "Sandi",
+    "merchantCapabilities": ["debit", "credit"],
     "supportedNetworks": ["amex", "visa", "discover", "masterCard"],
-    "countryCode": "US",
-    "currencyCode": "USD",
+    "countryCode": "MX",
+    "currencyCode": "MXN",
     "requiredBillingContactFields": ["emailAddress", "name", "phoneNumber", "postalAddress"],
     "requiredShippingContactFields": [],
     "shippingMethods": [
@@ -63,11 +63,11 @@ const String defaultGooglePay = '''{
     ],
     "merchantInfo": {
       "merchantId": "01234567890123456789",
-      "merchantName": "Example Merchant Name"
+      "merchantName": "Sanidad Digital"
     },
     "transactionInfo": {
-      "countryCode": "US",
-      "currencyCode": "USD"
+      "countryCode": "MX",
+      "currencyCode": "MXN"
     }
   }
 }''';
@@ -97,7 +97,7 @@ const String basicGooglePayLoadPaymentData = '''{
       "type": "CARD",
       "parameters": {
         "allowedAuthMethods": ["PAN_ONLY", "CRYPTOGRAM_3DS"],
-        "allowedCardNetworks": ["AMEX", "DISCOVER", "INTERAC", "JCB", "MASTERCARD", "VISA"]
+        "allowedCardNetworks": ["AMEX", "DISCOVER", "INTERAC", "JCB", "MASTERCARD", "VISA", "PAYPAL"]
       },
       "tokenizationSpecification": {
         "type": "PAYMENT_GATEWAY",
@@ -110,8 +110,8 @@ const String basicGooglePayLoadPaymentData = '''{
   ],
   "transactionInfo": {
     "totalPriceStatus": "FINAL",
-    "totalPrice": "12.34",
-    "currencyCode": "USD"
+    "totalPrice": "1.20",
+    "currencyCode": "MXN"
   }
 }''';
 
@@ -137,7 +137,7 @@ const String invalidGooglePayLoadPaymentData = '''{
       "type": "CARD",
       "parameters": {
         "allowedAuthMethods": ["PAN_ONLY", "CRYPTOGRAM_3DS"],
-        "allowedCardNetworks": ["AMEX", "DISCOVER", "INTERAC", "JCB", "MASTERCARD", "VISA"]
+        "allowedCardNetworks": ["AMEX", "DISCOVER", "INTERAC", "JCB", "MASTERCARD", "VISA", "PAYPAL"]
       },
       "tokenizationSpecification": {
         "type": "PAYMENT_GATEWAY",
@@ -150,7 +150,7 @@ const String invalidGooglePayLoadPaymentData = '''{
   ],
   "transactionInfo": {
     "totalPriceStatus": "FINAL",
-    "totalPrice": "12.34",
-    "currencyCode": "USD"
+    "totalPrice": "1.20",
+    "currencyCode": "MXN"
   }
 }''';
